@@ -1,0 +1,2169 @@
+{
+  "source": {
+    "id": "lecture-115-07",
+    "title": "保險講義.pdf",
+    "edition": "115年7月版",
+    "pdfPageCount": 114,
+    "printedPageRange": [
+      4,
+      117
+    ],
+    "sha256": "0839d7c62a157185aebdb51a9d18eb2605a41c759a7188002909ec0dc652cff9",
+    "method": "Apple Vision zh-Hant OCR 全114頁；逐頁閱讀OCR；目錄及關鍵表格視覺核對；非逐題完成校訂",
+    "scope": "講義分析，非現行法規查核或完整可發布題庫"
+  },
+  "chapters": [
+    {
+      "id": "P1",
+      "title": "風險管理與保險",
+      "unit": "保險實務",
+      "printedRange": [
+        5,
+        10
+      ],
+      "pdfRange": [
+        2,
+        7
+      ],
+      "stars": 3,
+      "questionCount": 20,
+      "aPlusBlockCount": 0,
+      "aPlusPrintedPages": [],
+      "questionPrintedPages": [
+        8,
+        9
+      ],
+      "answerPrintedPage": 10,
+      "priorityCounts": {
+        "MUST": 7,
+        "SHOULD": 0,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.0,
+      "importanceScore": 45.5
+    },
+    {
+      "id": "P2",
+      "title": "人身保險的意義與功能",
+      "unit": "保險實務",
+      "printedRange": [
+        11,
+        15
+      ],
+      "pdfRange": [
+        8,
+        12
+      ],
+      "stars": 1,
+      "questionCount": 18,
+      "aPlusBlockCount": 0,
+      "aPlusPrintedPages": [],
+      "questionPrintedPages": [
+        14,
+        15
+      ],
+      "answerPrintedPage": 15,
+      "priorityCounts": {
+        "MUST": 2,
+        "SHOULD": 3,
+        "OPTIONAL": 2
+      },
+      "crossTopicCoverage": 0.2857,
+      "importanceScore": 23.4
+    },
+    {
+      "id": "P3",
+      "title": "我國人身保險事業的基本認識",
+      "unit": "保險實務",
+      "printedRange": [
+        16,
+        20
+      ],
+      "pdfRange": [
+        13,
+        17
+      ],
+      "stars": 2,
+      "questionCount": 10,
+      "aPlusBlockCount": 1,
+      "aPlusPrintedPages": [
+        18
+      ],
+      "questionPrintedPages": [
+        19
+      ],
+      "answerPrintedPage": 20,
+      "priorityCounts": {
+        "MUST": 0,
+        "SHOULD": 6,
+        "OPTIONAL": 2
+      },
+      "crossTopicCoverage": 0.25,
+      "importanceScore": 33.3
+    },
+    {
+      "id": "P4",
+      "title": "人身保險的構造",
+      "unit": "保險實務",
+      "printedRange": [
+        21,
+        26
+      ],
+      "pdfRange": [
+        18,
+        23
+      ],
+      "stars": 4,
+      "questionCount": 18,
+      "aPlusBlockCount": 1,
+      "aPlusPrintedPages": [
+        23
+      ],
+      "questionPrintedPages": [
+        24,
+        25
+      ],
+      "answerPrintedPage": 26,
+      "priorityCounts": {
+        "MUST": 8,
+        "SHOULD": 2,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.3,
+      "importanceScore": 61.6
+    },
+    {
+      "id": "P5",
+      "title": "人身保險的種類",
+      "unit": "保險實務",
+      "printedRange": [
+        27,
+        52
+      ],
+      "pdfRange": [
+        24,
+        49
+      ],
+      "stars": 5,
+      "questionCount": 42,
+      "aPlusBlockCount": 9,
+      "aPlusPrintedPages": [
+        27,
+        30,
+        35,
+        36,
+        39,
+        40,
+        42,
+        43,
+        46
+      ],
+      "questionPrintedPages": [
+        49,
+        50,
+        51
+      ],
+      "answerPrintedPage": 52,
+      "priorityCounts": {
+        "MUST": 29,
+        "SHOULD": 9,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.1842,
+      "importanceScore": 91.8
+    },
+    {
+      "id": "P6",
+      "title": "投保實務與契約選擇",
+      "unit": "保險實務",
+      "printedRange": [
+        53,
+        59
+      ],
+      "pdfRange": [
+        50,
+        56
+      ],
+      "stars": 2,
+      "questionCount": 16,
+      "aPlusBlockCount": 2,
+      "aPlusPrintedPages": [
+        55,
+        57
+      ],
+      "questionPrintedPages": [
+        58,
+        59
+      ],
+      "answerPrintedPage": 59,
+      "priorityCounts": {
+        "MUST": 4,
+        "SHOULD": 1,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.8,
+      "importanceScore": 43.6
+    },
+    {
+      "id": "P7",
+      "title": "壽險行銷活動",
+      "unit": "保險實務",
+      "printedRange": [
+        60,
+        66
+      ],
+      "pdfRange": [
+        57,
+        63
+      ],
+      "stars": 3,
+      "questionCount": 15,
+      "aPlusBlockCount": 0,
+      "aPlusPrintedPages": [],
+      "questionPrintedPages": [
+        65,
+        66
+      ],
+      "answerPrintedPage": 66,
+      "priorityCounts": {
+        "MUST": 1,
+        "SHOULD": 4,
+        "OPTIONAL": 1
+      },
+      "crossTopicCoverage": 0.3333,
+      "importanceScore": 46.5
+    },
+    {
+      "id": "L1",
+      "title": "人身保險契約",
+      "unit": "保險法規",
+      "printedRange": [
+        67,
+        74
+      ],
+      "pdfRange": [
+        64,
+        71
+      ],
+      "stars": 5,
+      "questionCount": 26,
+      "aPlusBlockCount": 2,
+      "aPlusPrintedPages": [
+        68,
+        70
+      ],
+      "questionPrintedPages": [
+        72,
+        73
+      ],
+      "answerPrintedPage": 74,
+      "priorityCounts": {
+        "MUST": 11,
+        "SHOULD": 0,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.4545,
+      "importanceScore": 80.9
+    },
+    {
+      "id": "L2",
+      "title": "人身保險契約條款",
+      "unit": "保險法規",
+      "printedRange": [
+        75,
+        91
+      ],
+      "pdfRange": [
+        72,
+        88
+      ],
+      "stars": 5,
+      "questionCount": 41,
+      "aPlusBlockCount": 1,
+      "aPlusPrintedPages": [
+        80
+      ],
+      "questionPrintedPages": [
+        88,
+        89,
+        90
+      ],
+      "answerPrintedPage": 91,
+      "priorityCounts": {
+        "MUST": 21,
+        "SHOULD": 1,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.6364,
+      "importanceScore": 87.9
+    },
+    {
+      "id": "L3",
+      "title": "人身保險與稅法",
+      "unit": "保險法規",
+      "printedRange": [
+        92,
+        103
+      ],
+      "pdfRange": [
+        89,
+        100
+      ],
+      "stars": 4,
+      "questionCount": 25,
+      "aPlusBlockCount": 5,
+      "aPlusPrintedPages": [
+        92,
+        95,
+        96,
+        97
+      ],
+      "questionPrintedPages": [
+        101,
+        102
+      ],
+      "answerPrintedPage": 103,
+      "priorityCounts": {
+        "MUST": 13,
+        "SHOULD": 2,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.2,
+      "importanceScore": 71.9
+    },
+    {
+      "id": "L4",
+      "title": "保險權益相關重要法律介紹",
+      "unit": "保險法規",
+      "printedRange": [
+        104,
+        109
+      ],
+      "pdfRange": [
+        101,
+        106
+      ],
+      "stars": 1,
+      "questionCount": 11,
+      "aPlusBlockCount": 2,
+      "aPlusPrintedPages": [
+        106,
+        107
+      ],
+      "questionPrintedPages": [
+        108
+      ],
+      "answerPrintedPage": 109,
+      "priorityCounts": {
+        "MUST": 2,
+        "SHOULD": 5,
+        "OPTIONAL": 0
+      },
+      "crossTopicCoverage": 0.2857,
+      "importanceScore": 24.1
+    },
+    {
+      "id": "L5",
+      "title": "保險業務員管理規則的認識",
+      "unit": "保險法規",
+      "printedRange": [
+        110,
+        117
+      ],
+      "pdfRange": [
+        107,
+        114
+      ],
+      "stars": 4,
+      "questionCount": 20,
+      "aPlusBlockCount": 1,
+      "aPlusPrintedPages": [
+        115
+      ],
+      "questionPrintedPages": [
+        116,
+        117
+      ],
+      "answerPrintedPage": 117,
+      "priorityCounts": {
+        "MUST": 11,
+        "SHOULD": 2,
+        "OPTIONAL": 1
+      },
+      "crossTopicCoverage": 0.4286,
+      "importanceScore": 63.8
+    }
+  ],
+  "pages": [
+    {
+      "pdfPage": 1,
+      "printedPage": 4,
+      "chapterId": null,
+      "kinds": [
+        "目錄"
+      ],
+      "ocrCharacterCount": 373,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 2,
+      "printedPage": 5,
+      "chapterId": "P1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 376,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P1-01",
+        "P1-02",
+        "P1-03"
+      ]
+    },
+    {
+      "pdfPage": 3,
+      "printedPage": 6,
+      "chapterId": "P1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 451,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P1-04"
+      ]
+    },
+    {
+      "pdfPage": 4,
+      "printedPage": 7,
+      "chapterId": "P1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 408,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P1-05",
+        "P1-06",
+        "P1-07"
+      ]
+    },
+    {
+      "pdfPage": 5,
+      "printedPage": 8,
+      "chapterId": "P1",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1130,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 6,
+      "printedPage": 9,
+      "chapterId": "P1",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 684,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 7,
+      "printedPage": 10,
+      "chapterId": "P1",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 204,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 8,
+      "printedPage": 11,
+      "chapterId": "P2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 396,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P2-01",
+        "P2-02",
+        "P2-03"
+      ]
+    },
+    {
+      "pdfPage": 9,
+      "printedPage": 12,
+      "chapterId": "P2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 592,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P2-03",
+        "P2-04",
+        "P2-05"
+      ]
+    },
+    {
+      "pdfPage": 10,
+      "printedPage": 13,
+      "chapterId": "P2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 411,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P2-06",
+        "P2-07"
+      ]
+    },
+    {
+      "pdfPage": 11,
+      "printedPage": 14,
+      "chapterId": "P2",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1204,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 12,
+      "printedPage": 15,
+      "chapterId": "P2",
+      "kinds": [
+        "章末考題",
+        "答案"
+      ],
+      "ocrCharacterCount": 463,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 13,
+      "printedPage": 16,
+      "chapterId": "P3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 723,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P3-01",
+        "P3-02",
+        "P3-03",
+        "P3-04"
+      ]
+    },
+    {
+      "pdfPage": 14,
+      "printedPage": 17,
+      "chapterId": "P3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 775,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P3-07",
+        "P3-08"
+      ]
+    },
+    {
+      "pdfPage": 15,
+      "printedPage": 18,
+      "chapterId": "P3",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 358,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": [
+        "P3-04",
+        "P3-05",
+        "P3-06"
+      ]
+    },
+    {
+      "pdfPage": 16,
+      "printedPage": 19,
+      "chapterId": "P3",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1139,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 17,
+      "printedPage": 20,
+      "chapterId": "P3",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 141,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 18,
+      "printedPage": 21,
+      "chapterId": "P4",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 547,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P4-01",
+        "P4-02",
+        "P4-03",
+        "P4-04"
+      ]
+    },
+    {
+      "pdfPage": 19,
+      "printedPage": 22,
+      "chapterId": "P4",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 470,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P4-06",
+        "P4-07",
+        "P4-08"
+      ]
+    },
+    {
+      "pdfPage": 20,
+      "printedPage": 23,
+      "chapterId": "P4",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 505,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P4-07",
+        "P4-09",
+        "P4-10"
+      ]
+    },
+    {
+      "pdfPage": 21,
+      "printedPage": 24,
+      "chapterId": "P4",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1142,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P4-04",
+        "P4-05"
+      ]
+    },
+    {
+      "pdfPage": 22,
+      "printedPage": 25,
+      "chapterId": "P4",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 297,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 23,
+      "printedPage": 26,
+      "chapterId": "P4",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 191,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 24,
+      "printedPage": 27,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 328,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-01",
+        "P5-02"
+      ]
+    },
+    {
+      "pdfPage": 25,
+      "printedPage": 28,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 380,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-03"
+      ]
+    },
+    {
+      "pdfPage": 26,
+      "printedPage": 29,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 425,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-04"
+      ]
+    },
+    {
+      "pdfPage": 27,
+      "printedPage": 30,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 257,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-05"
+      ]
+    },
+    {
+      "pdfPage": 28,
+      "printedPage": 31,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 574,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-06",
+        "P5-07"
+      ]
+    },
+    {
+      "pdfPage": 29,
+      "printedPage": 32,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 735,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-08",
+        "P5-09"
+      ]
+    },
+    {
+      "pdfPage": 30,
+      "printedPage": 33,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 398,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-10",
+        "P5-11"
+      ]
+    },
+    {
+      "pdfPage": 31,
+      "printedPage": 34,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 488,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-12"
+      ]
+    },
+    {
+      "pdfPage": 32,
+      "printedPage": 35,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 540,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": [
+        "P5-12",
+        "P5-13",
+        "P5-14"
+      ]
+    },
+    {
+      "pdfPage": 33,
+      "printedPage": 36,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 788,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-13",
+        "P5-15",
+        "P5-16"
+      ]
+    },
+    {
+      "pdfPage": 34,
+      "printedPage": 37,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 722,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-17",
+        "P5-18"
+      ]
+    },
+    {
+      "pdfPage": 35,
+      "printedPage": 38,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 547,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-19",
+        "P5-20",
+        "P5-21",
+        "P5-22"
+      ]
+    },
+    {
+      "pdfPage": 36,
+      "printedPage": 39,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 760,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-23",
+        "P5-24",
+        "P5-25"
+      ]
+    },
+    {
+      "pdfPage": 37,
+      "printedPage": 40,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 581,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": [
+        "P5-26",
+        "P5-27"
+      ]
+    },
+    {
+      "pdfPage": 38,
+      "printedPage": 41,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 496,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-28",
+        "P5-29"
+      ]
+    },
+    {
+      "pdfPage": 39,
+      "printedPage": 42,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 610,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-29",
+        "P5-30",
+        "P5-31"
+      ]
+    },
+    {
+      "pdfPage": 40,
+      "printedPage": 43,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 510,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-31"
+      ]
+    },
+    {
+      "pdfPage": 41,
+      "printedPage": 44,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 461,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-32",
+        "P5-33"
+      ]
+    },
+    {
+      "pdfPage": 42,
+      "printedPage": 45,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 624,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-34"
+      ]
+    },
+    {
+      "pdfPage": 43,
+      "printedPage": 46,
+      "chapterId": "P5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 469,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-34",
+        "P5-35"
+      ]
+    },
+    {
+      "pdfPage": 44,
+      "printedPage": 47,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 491,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-36",
+        "P5-37"
+      ]
+    },
+    {
+      "pdfPage": 45,
+      "printedPage": 48,
+      "chapterId": "P5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 752,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-37",
+        "P5-38"
+      ]
+    },
+    {
+      "pdfPage": 46,
+      "printedPage": 49,
+      "chapterId": "P5",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1209,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P5-16"
+      ]
+    },
+    {
+      "pdfPage": 47,
+      "printedPage": 50,
+      "chapterId": "P5",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1241,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 48,
+      "printedPage": 51,
+      "chapterId": "P5",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1197,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 49,
+      "printedPage": 52,
+      "chapterId": "P5",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 360,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 50,
+      "printedPage": 53,
+      "chapterId": "P6",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 518,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-01"
+      ]
+    },
+    {
+      "pdfPage": 51,
+      "printedPage": 54,
+      "chapterId": "P6",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 1007,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-01",
+        "P6-02",
+        "P6-03"
+      ]
+    },
+    {
+      "pdfPage": 52,
+      "printedPage": 55,
+      "chapterId": "P6",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 658,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-02",
+        "P6-03",
+        "P6-04"
+      ]
+    },
+    {
+      "pdfPage": 53,
+      "printedPage": 56,
+      "chapterId": "P6",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 495,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-04"
+      ]
+    },
+    {
+      "pdfPage": 54,
+      "printedPage": 57,
+      "chapterId": "P6",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 362,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-05"
+      ]
+    },
+    {
+      "pdfPage": 55,
+      "printedPage": 58,
+      "chapterId": "P6",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1075,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P6-05"
+      ]
+    },
+    {
+      "pdfPage": 56,
+      "printedPage": 59,
+      "chapterId": "P6",
+      "kinds": [
+        "章末考題",
+        "答案"
+      ],
+      "ocrCharacterCount": 583,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 57,
+      "printedPage": 60,
+      "chapterId": "P7",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 531,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P7-01",
+        "P7-02"
+      ]
+    },
+    {
+      "pdfPage": 58,
+      "printedPage": 61,
+      "chapterId": "P7",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 506,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P7-03"
+      ]
+    },
+    {
+      "pdfPage": 59,
+      "printedPage": 62,
+      "chapterId": "P7",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 363,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P7-04"
+      ]
+    },
+    {
+      "pdfPage": 60,
+      "printedPage": 63,
+      "chapterId": "P7",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 588,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P7-05"
+      ]
+    },
+    {
+      "pdfPage": 61,
+      "printedPage": 64,
+      "chapterId": "P7",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 301,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "P7-06"
+      ]
+    },
+    {
+      "pdfPage": 62,
+      "printedPage": 65,
+      "chapterId": "P7",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1164,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 63,
+      "printedPage": 66,
+      "chapterId": "P7",
+      "kinds": [
+        "章末考題",
+        "答案"
+      ],
+      "ocrCharacterCount": 299,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 64,
+      "printedPage": 67,
+      "chapterId": "L1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 492,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L1-01",
+        "L1-02"
+      ]
+    },
+    {
+      "pdfPage": 65,
+      "printedPage": 68,
+      "chapterId": "L1",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 380,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": [
+        "L1-03",
+        "L1-04"
+      ]
+    },
+    {
+      "pdfPage": 66,
+      "printedPage": 69,
+      "chapterId": "L1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 892,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L1-02",
+        "L1-05"
+      ]
+    },
+    {
+      "pdfPage": 67,
+      "printedPage": 70,
+      "chapterId": "L1",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 622,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L1-05",
+        "L1-06",
+        "L1-07"
+      ]
+    },
+    {
+      "pdfPage": 68,
+      "printedPage": 71,
+      "chapterId": "L1",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 731,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L1-08",
+        "L1-09",
+        "L1-10",
+        "L1-11"
+      ]
+    },
+    {
+      "pdfPage": 69,
+      "printedPage": 72,
+      "chapterId": "L1",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1150,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 70,
+      "printedPage": 73,
+      "chapterId": "L1",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1036,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 71,
+      "printedPage": 74,
+      "chapterId": "L1",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 252,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 72,
+      "printedPage": 75,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 521,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-01",
+        "L2-02"
+      ]
+    },
+    {
+      "pdfPage": 73,
+      "printedPage": 76,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 703,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-03",
+        "L2-04",
+        "L2-05"
+      ]
+    },
+    {
+      "pdfPage": 74,
+      "printedPage": 77,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 601,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-04",
+        "L2-05"
+      ]
+    },
+    {
+      "pdfPage": 75,
+      "printedPage": 78,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 675,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-06",
+        "L2-07"
+      ]
+    },
+    {
+      "pdfPage": 76,
+      "printedPage": 79,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 805,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-08",
+        "L2-09"
+      ]
+    },
+    {
+      "pdfPage": 77,
+      "printedPage": 80,
+      "chapterId": "L2",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 748,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-08",
+        "L2-09"
+      ]
+    },
+    {
+      "pdfPage": 78,
+      "printedPage": 81,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 575,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-10",
+        "L2-11"
+      ]
+    },
+    {
+      "pdfPage": 79,
+      "printedPage": 82,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 682,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-12",
+        "L2-13",
+        "L2-14"
+      ]
+    },
+    {
+      "pdfPage": 80,
+      "printedPage": 83,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 669,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-15"
+      ]
+    },
+    {
+      "pdfPage": 81,
+      "printedPage": 84,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 782,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-15",
+        "L2-16"
+      ]
+    },
+    {
+      "pdfPage": 82,
+      "printedPage": 85,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 699,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-17",
+        "L2-18"
+      ]
+    },
+    {
+      "pdfPage": 83,
+      "printedPage": 86,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 702,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-19",
+        "L2-20"
+      ]
+    },
+    {
+      "pdfPage": 84,
+      "printedPage": 87,
+      "chapterId": "L2",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 417,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-21"
+      ]
+    },
+    {
+      "pdfPage": 85,
+      "printedPage": 88,
+      "chapterId": "L2",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1229,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 86,
+      "printedPage": 89,
+      "chapterId": "L2",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1350,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-22"
+      ]
+    },
+    {
+      "pdfPage": 87,
+      "printedPage": 90,
+      "chapterId": "L2",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1151,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L2-14"
+      ]
+    },
+    {
+      "pdfPage": 88,
+      "printedPage": 91,
+      "chapterId": "L2",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 349,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 89,
+      "printedPage": 92,
+      "chapterId": "L3",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 611,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-01",
+        "L3-02",
+        "L3-03"
+      ]
+    },
+    {
+      "pdfPage": 90,
+      "printedPage": 93,
+      "chapterId": "L3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 586,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-04",
+        "L3-05",
+        "L3-06"
+      ]
+    },
+    {
+      "pdfPage": 91,
+      "printedPage": 94,
+      "chapterId": "L3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 517,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-07"
+      ]
+    },
+    {
+      "pdfPage": 92,
+      "printedPage": 95,
+      "chapterId": "L3",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 417,
+      "readStatus": "ocr_read",
+      "visualChecked": true,
+      "conceptIds": [
+        "L3-07",
+        "L3-08"
+      ]
+    },
+    {
+      "pdfPage": 93,
+      "printedPage": 96,
+      "chapterId": "L3",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 418,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-09"
+      ]
+    },
+    {
+      "pdfPage": 94,
+      "printedPage": 97,
+      "chapterId": "L3",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 554,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-10"
+      ]
+    },
+    {
+      "pdfPage": 95,
+      "printedPage": 98,
+      "chapterId": "L3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 569,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-11",
+        "L3-12"
+      ]
+    },
+    {
+      "pdfPage": 96,
+      "printedPage": 99,
+      "chapterId": "L3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 192,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-12"
+      ]
+    },
+    {
+      "pdfPage": 97,
+      "printedPage": 100,
+      "chapterId": "L3",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 770,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L3-04",
+        "L3-13",
+        "L3-14",
+        "L3-15"
+      ]
+    },
+    {
+      "pdfPage": 98,
+      "printedPage": 101,
+      "chapterId": "L3",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1073,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 99,
+      "printedPage": 102,
+      "chapterId": "L3",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1204,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 100,
+      "printedPage": 103,
+      "chapterId": "L3",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 250,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 101,
+      "printedPage": 104,
+      "chapterId": "L4",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 822,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L4-01",
+        "L4-02"
+      ]
+    },
+    {
+      "pdfPage": 102,
+      "printedPage": 105,
+      "chapterId": "L4",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 689,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L4-02",
+        "L4-03"
+      ]
+    },
+    {
+      "pdfPage": 103,
+      "printedPage": 106,
+      "chapterId": "L4",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 726,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L4-03",
+        "L4-04"
+      ]
+    },
+    {
+      "pdfPage": 104,
+      "printedPage": 107,
+      "chapterId": "L4",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 618,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L4-05",
+        "L4-06"
+      ]
+    },
+    {
+      "pdfPage": 105,
+      "printedPage": 108,
+      "chapterId": "L4",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1045,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L4-05",
+        "L4-07"
+      ]
+    },
+    {
+      "pdfPage": 106,
+      "printedPage": 109,
+      "chapterId": "L4",
+      "kinds": [
+        "答案"
+      ],
+      "ocrCharacterCount": 152,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": []
+    },
+    {
+      "pdfPage": 107,
+      "printedPage": 110,
+      "chapterId": "L5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 946,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-01",
+        "L5-02",
+        "L5-03",
+        "L5-04"
+      ]
+    },
+    {
+      "pdfPage": 108,
+      "printedPage": 111,
+      "chapterId": "L5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 591,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-05",
+        "L5-06"
+      ]
+    },
+    {
+      "pdfPage": 109,
+      "printedPage": 112,
+      "chapterId": "L5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 874,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-07",
+        "L5-08"
+      ]
+    },
+    {
+      "pdfPage": 110,
+      "printedPage": 113,
+      "chapterId": "L5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 773,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-09",
+        "L5-10"
+      ]
+    },
+    {
+      "pdfPage": 111,
+      "printedPage": 114,
+      "chapterId": "L5",
+      "kinds": [
+        "教材"
+      ],
+      "ocrCharacterCount": 832,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-11",
+        "L5-12"
+      ]
+    },
+    {
+      "pdfPage": 112,
+      "printedPage": 115,
+      "chapterId": "L5",
+      "kinds": [
+        "教材",
+        "知識A+"
+      ],
+      "ocrCharacterCount": 362,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-14"
+      ]
+    },
+    {
+      "pdfPage": 113,
+      "printedPage": 116,
+      "chapterId": "L5",
+      "kinds": [
+        "章末考題"
+      ],
+      "ocrCharacterCount": 1243,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-13"
+      ]
+    },
+    {
+      "pdfPage": 114,
+      "printedPage": 117,
+      "chapterId": "L5",
+      "kinds": [
+        "章末考題",
+        "答案"
+      ],
+      "ocrCharacterCount": 941,
+      "readStatus": "ocr_read",
+      "visualChecked": false,
+      "conceptIds": [
+        "L5-13"
+      ]
+    }
+  ],
+  "repeatGroups": [
+    {
+      "title": "生命表與保費",
+      "conceptIds": [
+        "P2-03",
+        "P2-04",
+        "P4-03",
+        "P4-04",
+        "P5-15"
+      ]
+    },
+    {
+      "title": "保費、保價金與契約處理",
+      "conceptIds": [
+        "P4-09",
+        "P5-02",
+        "P7-05",
+        "L2-03",
+        "L2-09",
+        "L2-10",
+        "L2-11"
+      ]
+    },
+    {
+      "title": "受益人與繼承",
+      "conceptIds": [
+        "P5-16",
+        "L1-02",
+        "L1-05",
+        "L1-06",
+        "L3-05",
+        "L3-09",
+        "L3-11"
+      ]
+    },
+    {
+      "title": "傷害及健康給付",
+      "conceptIds": [
+        "P5-19",
+        "P5-21",
+        "P5-23",
+        "L1-11",
+        "L2-15",
+        "L2-16",
+        "L2-18",
+        "L2-19"
+      ]
+    },
+    {
+      "title": "高齡及適合度",
+      "conceptIds": [
+        "P3-04",
+        "P3-05",
+        "P5-31",
+        "P6-02",
+        "L4-02",
+        "L5-09"
+      ]
+    },
+    {
+      "title": "承保與據實告知",
+      "conceptIds": [
+        "P6-01",
+        "P6-04",
+        "L1-09",
+        "L2-01",
+        "L2-08",
+        "L5-10"
+      ]
+    },
+    {
+      "title": "代收保費與業務員責任",
+      "conceptIds": [
+        "P6-03",
+        "L5-10",
+        "L5-13"
+      ]
+    },
+    {
+      "title": "期限制度辨別",
+      "conceptIds": [
+        "P7-02",
+        "L2-07",
+        "L4-03"
+      ]
+    },
+    {
+      "title": "公平待客及訓練",
+      "conceptIds": [
+        "L4-02",
+        "L5-07",
+        "L5-08",
+        "L5-09"
+      ]
+    },
+    {
+      "title": "通知、催告與停復效",
+      "conceptIds": [
+        "L2-02",
+        "L2-04",
+        "L2-05",
+        "L5-14"
+      ]
+    }
+  ]
+}

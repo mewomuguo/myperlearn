@@ -1,0 +1,2247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/insurance-study/v1.schema.json",
+  "title": "15天人身保險考試通關系統 V1",
+  "description": "教材包與學習紀錄包。跨實體ID、日期條件、題目規則等另由應用層語義驗證；analysis目錄不宣稱為已審核教材包。",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/ContentPack"
+    },
+    {
+      "$ref": "#/$defs/RecordExport"
+    }
+  ],
+  "$defs": {
+    "Priority": {
+      "type": "string",
+      "enum": [
+        "MUST",
+        "SHOULD",
+        "OPTIONAL"
+      ]
+    },
+    "Tag": {
+      "type": "string",
+      "enum": [
+        "理解",
+        "必背",
+        "數字／期限",
+        "易混淆",
+        "計算",
+        "情境題",
+        "法規題"
+      ]
+    },
+    "ReviewStatus": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "needs_review",
+        "verified",
+        "quarantined",
+        "retired"
+      ]
+    },
+    "ErrorType": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "number",
+        "confusion",
+        "misread",
+        "calculation",
+        "guess",
+        "unclassified"
+      ]
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "lecture_body",
+            "toc_star",
+            "a_plus",
+            "chapter_question",
+            "cross_chapter",
+            "official_rule",
+            "external_question"
+          ]
+        },
+        "pdfPages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 114
+          },
+          "minItems": 0
+        },
+        "printedPages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 4,
+            "maximum": 117
+          },
+          "minItems": 0
+        },
+        "questionNumbers": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 0
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "sourceId",
+        "kind",
+        "pdfPages",
+        "printedPages",
+        "questionNumbers",
+        "note"
+      ]
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "lecture",
+            "official",
+            "external"
+          ]
+        },
+        "edition": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "accessedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "usage": {
+          "type": "string",
+          "enum": [
+            "private_reference",
+            "public_allowed",
+            "original_summary",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "kind",
+        "edition",
+        "url",
+        "accessedAt",
+        "sha256",
+        "usage",
+        "notes"
+      ]
+    },
+    "Chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "保險實務",
+            "保險法規"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stars": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "questionCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "aPlusBlockCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "importanceScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "unit",
+        "title",
+        "stars",
+        "questionCount",
+        "aPlusBlockCount",
+        "importanceScore",
+        "evidence"
+      ]
+    },
+    "Lesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "plainExplanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mustRecall": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "confusions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "withConceptId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "difference": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "withConceptId",
+              "difference"
+            ]
+          },
+          "minItems": 0
+        },
+        "checkQuestionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "estimatedMinutes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "plainExplanation",
+        "example",
+        "mustRecall",
+        "confusions",
+        "checkQuestionIds",
+        "estimatedMinutes"
+      ]
+    },
+    "Concept": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonicalConceptId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chapterIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "$ref": "#/$defs/Priority"
+        },
+        "priorityReason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Tag"
+          },
+          "minItems": 1
+        },
+        "prerequisiteIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "relatedConceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "firstDay": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 11
+        },
+        "outcome": {
+          "type": "string",
+          "minLength": 1
+        },
+        "importanceScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "lectureQuestionFamilyCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1
+        },
+        "lesson": {
+          "$ref": "#/$defs/Lesson"
+        },
+        "numberCardIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "reviewStatus": {
+          "$ref": "#/$defs/ReviewStatus"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "canonicalConceptId",
+        "chapterIds",
+        "title",
+        "priority",
+        "priorityReason",
+        "tags",
+        "prerequisiteIds",
+        "relatedConceptIds",
+        "firstDay",
+        "outcome",
+        "importanceScore",
+        "lectureQuestionFamilyCount",
+        "evidence",
+        "lesson",
+        "numberCardIds",
+        "reviewStatus",
+        "version"
+      ]
+    },
+    "RuleScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effectiveFrom": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effectiveTo": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "examScopeStatus": {
+          "type": "string",
+          "enum": [
+            "unconfirmed",
+            "confirmed",
+            "historical"
+          ]
+        },
+        "verificationSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "checkedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "conflictNote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "edition",
+        "effectiveFrom",
+        "effectiveTo",
+        "examScopeStatus",
+        "verificationSourceIds",
+        "checkedAt",
+        "conflictNote"
+      ]
+    },
+    "Question": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "primaryConceptId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "lecture_original",
+            "lecture_adapted",
+            "external"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "single_choice",
+            "statement_combination",
+            "calculation_choice",
+            "scenario_choice",
+            "recall"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Tag"
+          },
+          "minItems": 1
+        },
+        "stem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ]
+          },
+          "minItems": 0
+        },
+        "correctOptionId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "acceptedAnswers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "optionExplanations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "optionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "optionId",
+              "reason"
+            ]
+          },
+          "minItems": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1
+        },
+        "ruleScope": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RuleScope"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewStatus": {
+          "$ref": "#/$defs/ReviewStatus"
+        },
+        "reviewedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "usage": {
+          "type": "string",
+          "enum": [
+            "private_only",
+            "public_allowed",
+            "original"
+          ]
+        },
+        "estimatedSeconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "familyId",
+        "conceptIds",
+        "primaryConceptId",
+        "origin",
+        "type",
+        "tags",
+        "stem",
+        "options",
+        "correctOptionId",
+        "acceptedAnswers",
+        "explanation",
+        "optionExplanations",
+        "evidence",
+        "ruleScope",
+        "reviewStatus",
+        "reviewedAt",
+        "usage",
+        "estimatedSeconds"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "recall"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "options": {
+                "maxItems": 0
+              },
+              "correctOptionId": {
+                "type": "null"
+              },
+              "acceptedAnswers": {
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "options": {
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "correctOptionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "acceptedAnswers": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "NumberCard": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conceptId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "$ref": "#/$defs/Priority"
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startRule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "day",
+            "business_day",
+            "month",
+            "year",
+            "percent",
+            "age",
+            "TWD",
+            "count",
+            "hour",
+            "ratio"
+          ]
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "eq",
+            "lt",
+            "lte",
+            "gt",
+            "gte"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "confusableCardIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "questionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "ruleScope": {
+          "$ref": "#/$defs/RuleScope"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1
+        },
+        "reviewStatus": {
+          "$ref": "#/$defs/ReviewStatus"
+        }
+      },
+      "required": [
+        "id",
+        "conceptId",
+        "title",
+        "priority",
+        "subject",
+        "trigger",
+        "startRule",
+        "value",
+        "unit",
+        "operator",
+        "conditions",
+        "exceptions",
+        "confusableCardIds",
+        "questionIds",
+        "ruleScope",
+        "evidence",
+        "reviewStatus"
+      ]
+    },
+    "ExamSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "durationMinutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pointsPerQuestion": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "passScore": {
+          "type": "number"
+        },
+        "chapterIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "quotas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "chapterId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "chapterId",
+              "count"
+            ]
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "questionCount",
+        "durationMinutes",
+        "pointsPerQuestion",
+        "passScore",
+        "chapterIds",
+        "quotas"
+      ]
+    },
+    "ExamProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "unconfirmed",
+            "verified"
+          ]
+        },
+        "verificationSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "verifiedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExamSection"
+          },
+          "minItems": 0
+        },
+        "passRule": {
+          "type": "string",
+          "enum": [
+            "all_sections",
+            "total_score",
+            "unconfirmed"
+          ]
+        },
+        "totalPassScore": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bufferPoints": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unansweredIsWrong": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "status",
+        "verificationSourceIds",
+        "verifiedAt",
+        "sections",
+        "passRule",
+        "totalPassScore",
+        "bufferPoints",
+        "unansweredIsWrong"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "verified"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "verificationSourceIds": {
+                "minItems": 1
+              },
+              "verifiedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "sections": {
+                "minItems": 1
+              },
+              "passRule": {
+                "enum": [
+                  "all_sections",
+                  "total_score"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "DayPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 15
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requiredConceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "optionalConceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "newLearningAllowed": {
+          "type": "boolean"
+        },
+        "learnMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answerMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reviewMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "targetQuestionsMin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "targetQuestionsMax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fullExamCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "examLabels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "outcome": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "day",
+        "title",
+        "requiredConceptIds",
+        "optionalConceptIds",
+        "newLearningAllowed",
+        "learnMinutes",
+        "answerMinutes",
+        "reviewMinutes",
+        "targetQuestionsMin",
+        "targetQuestionsMax",
+        "fullExamCount",
+        "examLabels",
+        "outcome"
+      ]
+    },
+    "TaskItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "lesson",
+            "practice",
+            "review",
+            "mistake_retry",
+            "number_drill",
+            "exam",
+            "exam_review"
+          ]
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "questionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "examSessionId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimatedMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "active",
+            "completed",
+            "skipped"
+          ]
+        },
+        "completedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "conceptIds",
+        "questionIds",
+        "examSessionId",
+        "estimatedMinutes",
+        "required",
+        "reason",
+        "status",
+        "completedAt"
+      ]
+    },
+    "TaskQueue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "planDay": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 15
+        },
+        "localDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "budgetMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaskItem"
+          },
+          "minItems": 0
+        },
+        "currentItemId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "completed",
+            "superseded"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "planDay",
+        "localDate",
+        "timezone",
+        "contentVersion",
+        "createdAt",
+        "budgetMinutes",
+        "items",
+        "currentItemId",
+        "status"
+      ]
+    },
+    "Attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "selectedOptionId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "recallAnswer": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "correct": {
+          "type": "boolean"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "practice",
+            "review",
+            "number_drill",
+            "exam"
+          ]
+        },
+        "answeredAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "localDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "durationMs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hintUsed": {
+          "type": "boolean"
+        },
+        "answerSeenBeforeSubmit": {
+          "type": "boolean"
+        },
+        "independentMeasurement": {
+          "type": "boolean"
+        },
+        "errorTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ErrorType"
+          },
+          "minItems": 0
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "invalidatedReason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "profileId",
+        "sessionId",
+        "questionId",
+        "questionVersion",
+        "familyId",
+        "conceptIds",
+        "selectedOptionId",
+        "recallAnswer",
+        "correct",
+        "mode",
+        "answeredAt",
+        "localDate",
+        "durationMs",
+        "hintUsed",
+        "answerSeenBeforeSubmit",
+        "independentMeasurement",
+        "errorTypes",
+        "contentVersion",
+        "invalidatedReason"
+      ]
+    },
+    "Progress": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "conceptId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "unseen",
+            "learning",
+            "learned",
+            "provisional",
+            "mastered",
+            "review_due"
+          ]
+        },
+        "learnedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastReviewedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nextReviewDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intervalDays": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independentAttempts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independentFamilyIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "independentDates": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          },
+          "minItems": 0
+        },
+        "recentAccuracy": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "numberMastered": {
+          "type": "boolean"
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "conceptId",
+        "status",
+        "learnedAt",
+        "lastReviewedAt",
+        "nextReviewDate",
+        "intervalDays",
+        "independentAttempts",
+        "independentFamilyIds",
+        "independentDates",
+        "recentAccuracy",
+        "numberMastered",
+        "contentVersion",
+        "updatedAt"
+      ]
+    },
+    "Mistake": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conceptId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionFamilyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attemptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "errorTypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ErrorType"
+          },
+          "minItems": 0
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "open",
+            "recovering",
+            "resolved"
+          ]
+        },
+        "firstWrongAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastWrongAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "wrongCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recoveryAttemptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "resolvedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "conceptId",
+        "questionFamilyId",
+        "attemptIds",
+        "errorTypes",
+        "status",
+        "firstWrongAt",
+        "lastWrongAt",
+        "wrongCount",
+        "recoveryAttemptIds",
+        "resolvedAt"
+      ]
+    },
+    "ExamItemSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "questionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "questionVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "familyId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sectionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stem": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ]
+          },
+          "minItems": 2
+        },
+        "correctOptionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "points": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "questionId",
+        "questionVersion",
+        "familyId",
+        "sectionId",
+        "stem",
+        "options",
+        "correctOptionId",
+        "conceptIds",
+        "points"
+      ]
+    },
+    "ExamSession": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profileSnapshot": {
+          "$ref": "#/$defs/ExamProfile"
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "active",
+            "submitted",
+            "expired"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "full_mock",
+            "practice_paper"
+          ]
+        },
+        "startedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deadlineAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "submittedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "questionSnapshots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExamItemSnapshot"
+          },
+          "minItems": 0
+        },
+        "sectionDeadlines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "sectionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "deadlineAt": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "sectionId",
+              "deadlineAt"
+            ]
+          },
+          "minItems": 0
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "questionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "optionId": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "markedForReview": {
+                "type": "boolean"
+              },
+              "answeredAt": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "questionId",
+              "optionId",
+              "markedForReview",
+              "answeredAt"
+            ]
+          },
+          "minItems": 0
+        },
+        "sectionScores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "sectionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "score": {
+                "type": "number"
+              },
+              "maxScore": {
+                "type": "number"
+              },
+              "pass": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "sectionId",
+              "score",
+              "maxScore",
+              "pass"
+            ]
+          },
+          "minItems": 0
+        },
+        "unseenFamilyRatio": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lockedByTabId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "profileSnapshot",
+        "contentVersion",
+        "status",
+        "kind",
+        "startedAt",
+        "deadlineAt",
+        "submittedAt",
+        "questionSnapshots",
+        "sectionDeadlines",
+        "answers",
+        "sectionScores",
+        "unseenFamilyRatio",
+        "lockedByTabId"
+      ]
+    },
+    "Settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "profileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "planStartDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "examDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dailyMinutes": {
+          "type": "integer",
+          "minimum": 15,
+          "maximum": 720
+        },
+        "examProfileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fontScale": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "profileId",
+        "timezone",
+        "planStartDate",
+        "examDate",
+        "dailyMinutes",
+        "examProfileId",
+        "fontScale",
+        "updatedAt"
+      ]
+    },
+    "ReadinessSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "computedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "algorithmVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "provisional": {
+          "type": "boolean"
+        },
+        "coreMastery": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "coreAccuracy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "mockEvidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "repeatErrorRate": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "numberMastery": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidenceGaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "computedAt",
+        "algorithmVersion",
+        "score",
+        "provisional",
+        "coreMastery",
+        "coreAccuracy",
+        "mockEvidence",
+        "repeatErrorRate",
+        "numberMastery",
+        "evidenceGaps"
+      ]
+    },
+    "ContentPack": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "content_pack"
+          ]
+        },
+        "schemaVersion": {
+          "type": "string",
+          "enum": [
+            "1.0.0"
+          ]
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "minItems": 1
+        },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Chapter"
+          },
+          "minItems": 12,
+          "maxItems": 12
+        },
+        "concepts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Concept"
+          },
+          "minItems": 1
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Question"
+          },
+          "minItems": 0
+        },
+        "numberCards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NumberCard"
+          },
+          "minItems": 0
+        },
+        "plans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DayPlan"
+          },
+          "minItems": 15,
+          "maxItems": 15
+        },
+        "examProfiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExamProfile"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "contentVersion",
+        "sources",
+        "chapters",
+        "concepts",
+        "questions",
+        "numberCards",
+        "plans",
+        "examProfiles"
+      ]
+    },
+    "RecordExport": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "record_export"
+          ]
+        },
+        "schemaVersion": {
+          "type": "string",
+          "enum": [
+            "1.0.0"
+          ]
+        },
+        "contentVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exportedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "settings": {
+          "$ref": "#/$defs/Settings"
+        },
+        "attempts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Attempt"
+          },
+          "minItems": 0
+        },
+        "progress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Progress"
+          },
+          "minItems": 0
+        },
+        "mistakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Mistake"
+          },
+          "minItems": 0
+        },
+        "taskQueues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaskQueue"
+          },
+          "minItems": 0
+        },
+        "examSessions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExamSession"
+          },
+          "minItems": 0
+        },
+        "readinessSnapshots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReadinessSnapshot"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "contentVersion",
+        "exportedAt",
+        "settings",
+        "attempts",
+        "progress",
+        "mistakes",
+        "taskQueues",
+        "examSessions",
+        "readinessSnapshots"
+      ]
+    }
+  }
+}

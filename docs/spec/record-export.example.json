@@ -1,0 +1,22 @@
+{
+  "kind": "record_export",
+  "schemaVersion": "1.0.0",
+  "contentVersion": "115-07-v1-draft",
+  "exportedAt": "2026-09-25T00:00:00Z",
+  "settings": {
+    "profileId": "example-local-profile",
+    "timezone": "Asia/Taipei",
+    "planStartDate": "2026-09-25",
+    "examDate": null,
+    "dailyMinutes": 180,
+    "examProfileId": "pending-life-insurance",
+    "fontScale": 1,
+    "updatedAt": "2026-09-25T00:00:00Z"
+  },
+  "attempts": [],
+  "progress": [],
+  "mistakes": [],
+  "taskQueues": [],
+  "examSessions": [],
+  "readinessSnapshots": []
+}
