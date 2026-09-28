@@ -11,7 +11,9 @@
     "check:content": "node scripts/check-content.mjs",
     "test:e2e": "playwright test",
     "content:build": "python3 scripts/build-content.py",
-    "schema:export": "node scripts/export-schema.mjs"
+    "schema:export": "node scripts/export-schema.mjs",
+    "bank:build": "python3 scripts/build-question-bank.py",
+    "check:bank": "node scripts/check-question-bank.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",

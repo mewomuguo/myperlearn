@@ -163,4 +163,28 @@ export interface StudyState {
   queues: Queue[];
   practices: Practice[];
   exams: Exam[];
+  bankAttempts?: BankAttempt[];
+  bankRuns?: BankRun[];
+}
+
+export type BankSection = 'practice'|'practice-extra'|'law'|'law-extra';
+export type BankOption = '1'|'2'|'3'|'4';
+export interface BankQuestion {
+ id:string;number:string;section:BankSection;pdfPage:number;printedPage:number;
+ answer:BankOption|null;starred:boolean;lawReference:string[];text:string;
+ image:string;answerImage:string|null;hasSupplement:boolean;
+ status:'source_key'|'needs_review';version:string;
+ chapterId:string|null;conceptIds:string[];mappingNote:string;reviewNote?:string;
+}
+export interface QuestionBank {
+ version:string;title:string;edition:string;pageCount:number;sha256:string;
+ questions:BankQuestion[];notes:string[];
+}
+export interface BankAttempt {
+ id:string;questionId:string;bankVersion:string;runId:string;
+ selectedOption:BankOption;answeredAt:string;errorTypes:ErrorType[];excluded:boolean;
+}
+export interface BankRun {
+ id:string;questionIds:string[];bankVersion:string;index:number;
+ createdAt:string;finishedAt?:string;
 }

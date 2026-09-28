@@ -39,6 +39,8 @@ export const recordSchema = z
     contentVersion: id,
     revision: z.number().int().nonnegative(),
     exportedAt: date.optional(),
+    bankAttempts: z.array(z.object({id,questionId:id,bankVersion:id,runId:id,selectedOption:z.enum(["1","2","3","4"]),answeredAt:date,errorTypes:z.array(error).max(7),excluded:z.boolean()}).strict()).max(100000).optional(),
+    bankRuns:z.array(z.object({id,questionIds:z.array(id).min(1).max(500),bankVersion:id,index:z.number().int().min(0).max(500),createdAt:date,finishedAt:date.optional()}).strict()).max(10000).optional(),
     settings: z
       .object({
         profileId: id,
@@ -220,6 +222,8 @@ export function parseRecord(text: string, c: Content): StudyState {
     }
     if (e.index >= e.questions.length) throw Error("模考題號無效。");
   }
+  for(const list of [s.bankAttempts??[],s.bankRuns??[]])if(new Set(list.map(x=>x.id)).size!==list.length)throw Error('考題專區有重複識別碼。');
+  for(const run of s.bankRuns??[])if(run.index>run.questionIds.length||new Set(run.questionIds).size!==run.questionIds.length)throw Error('考題專區進度無效。');
   return s;
 }
 function canonical(value: unknown): string {
@@ -247,9 +251,11 @@ export function mergeRecords(
     "queues",
     "practices",
     "exams",
+    "bankAttempts",
+    "bankRuns",
   ] as const) {
-    const map = new Map<string, unknown>(current[key].map((x) => [x.id, x]));
-    for (const item of incoming[key]) {
+    const map = new Map<string, unknown>((current[key]??[]).map((x) => [x.id, x]));
+    for (const item of incoming[key]??[]) {
       const old = map.get(item.id);
       if (old && canonical(old) !== canonical(item))
         throw Error(

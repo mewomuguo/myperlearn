@@ -1,6 +1,4 @@
 import React, {
-  createContext,
-  useContext,
   useEffect,
   useRef,
   useState,
@@ -63,14 +61,8 @@ import {
 import { mergeRecords, parseRecord } from "./importer";
 import "./style.css";
 import { AgentActions } from "./webmcp";
-type Context = {
-  c: Content;
-  s: StudyState;
-  commit: (f: (s: StudyState) => StudyState) => Promise<void>;
-  toast: (m: string) => void;
-};
-const Study = createContext<Context>(null!);
-const useStudy = () => useContext(Study);
+import { Study, useStudy } from './study-context';
+import { BankPage } from './question-bank';
 const go = (path: string) => {
   location.hash = path;
 };
@@ -240,6 +232,7 @@ function App() {
       { href: "/library", label: "考點與練習", icon: BookOpen },
       { href: "/mistakes", label: "錯題與弱點", icon: Target },
       { href: "/exams", label: "模擬考", icon: Timer },
+      { href: "/question-bank", label: "考題專區", icon: ListChecks },
     ];
   return (
     <Study.Provider value={{ c, s, commit, toast }}>
@@ -386,6 +379,10 @@ function Routes({ route }: { route: string }) {
       return <Mistakes />;
     case "exams":
       return id ? <ExamPage id={id} /> : <Exams />;
+    case "question-bank":
+      return <BankPage />;
+    case "bank-run":
+      return <BankPage runId={id} />;
     case "settings":
       return <SettingsPage />;
     default:
@@ -430,6 +427,7 @@ function Dashboard() {
       >
         先完成今天的核心，再讓錯題帶你找到下一步。
       </PageTitle>
+      <a className="bank-entry card" href="#/question-bank"><div><span className="badge">新增 · 115.09考題</span><strong>保險考題專區</strong><small>原卷練習、星號題與答案核對</small></div><ChevronRight size={22}/></a>
       <section className="hero">
         <div className="hero-copy">
           <div className="hero-kicker">
